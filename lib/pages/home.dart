@@ -20,21 +20,44 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   List<MovieModel> listMovie = [
     MovieModel(
-        title: "Star Wars : The Last",
+        title: "Star Wars : The Last Jedi",
         image: ImageDir.starwars,
         rating: "4",
         description:
-            "Dalam film Lucasfilm Star Wars: The Last Jedi, kisah keluarga Skywalker diteruskan ketika para pahlawan The Force Awakens bergabung dengan para legenda galaksi dalam sebuah petualangan mencengangkan untuk menguak kunci misteri lintas zaman mengenai the Force serta terkuaknya secara mengejutkan berbagai rahasia masa lalu. Film ini dibintangi Mark Hamill, Carrie Fisher, Adam Driver, Daisy Ridley, John Boyega, Oscar Isaac, Lupita Nyong’o, Andy Serkis, Domhnall Gleeson, Anthony Daniels, Gwendoline Christie, Kelly Marie Tran, Laura Dern dan Benicio Del Toro. Star Wars: The Last Jedi ditulis & disutradarai oleh Rian Johnson dan diproduseri Kathleen Kennedy serta Ram Bergman. J.J. Abrams, Tom Karnowski dan Jason McGatlin sebagai produser eksekutif."),
+            "Pasukan perlawanan , yang dipimpin oleh Jenderal Leia Organa, melarikan diri dari D'Qar saat armada First Order tiba. \nSerangan balasan mahal yang dipimpin oleh Poe Dameron menghancurkan tuntutan orde pertama, namun setelah melarikan diri ke ruang henti, Orde Pertama melacaknya dan menyerang konvoi Perlawanan. Poe diturunkan karena kehilangan kapal dan tidak menaati Leia. Kylo Ren, anak Leia, ragu-ragu untuk menyalakan kapal Perlawanan setelah merasakan kehadiran ibunya, namun wingman tempur TIE-nya menghancurkan jembatan tersebut, melumpuhkan Leia. Tidak setuju dengan strategi pasif pemimpin baru Vice Admiral Holdo, Poe membantu Finn, BB-8, dan mekanik Rose Tico memulai misi rahasia untuk menonaktifkan perangkat pelacakan.",
+        duration: 152,
+        director: 'Rian Jhonson',
+        writter: 'Rian Jhonson',
+        genre: 'Action, Sci-fi',
+        ph: 'Lucasfillm Ltd.',
+        score: 6.9,
+        pg: 13),
     MovieModel(
         title: "Fast & Furious 9",
         image: ImageDir.fastandfurious,
         rating: "5",
-        description: "Fast & Furious"),
+        description:
+            "Fast & Furious 9 mengisahkan Dominic Toretto (Vin Diesel) yang hidup tenang bersama keluarganya. Namun ketenangan tersebut mulai terusik dengan kehadiran Jakob Toretto (John Cena) yang tak lain adalah saudara Dom dan Mia. Jakob merupakan seorang pembunuh profesional yang sangat mematikan. Sama seperti Dom, Jakob juga termasuk seorang pengemudi andal yang terampil dalam hal kebut-kebutan di jalanan. Jakob rupanya terlibat dalam sebuah rencana yang bisa menghancurkan dunia. Hal ini membuat Dom tak bisa tinggal diam dan berusaha untuk menghentikan saudaranya tersebut.",
+        duration: 143,
+        director: 'Justin Lin',
+        writter: 'Daniel Casey',
+        genre: 'Action',
+        ph: 'Universal Pitcures',
+        score: 5.2,
+        pg: 13),
     MovieModel(
         title: "The Conjuring 3",
         image: ImageDir.thecondjuring,
         rating: "2",
-        description: "Lanjutan dari sequel Condjuring 2"),
+        description:
+            "Film ini menceritakan pengalaman spiritual pasangan paranormal Ed dan Lorraine Warren dalam menghadapi iblis kuat yang merasuki manusia dan melakukan pembunuhan. Kisah bermula ketika keduanya diminta untuk mendampingi ritual pengusiran setan yang meneror seorang anak bernama David Glatzel. Ritual berjalan dengan cukup kacau karena iblis yang sangat kuat. Sampai akhirnya, Arne Johnson yang merupakan kekasih dari kakak David, yaitu Debbie, memberikan tubuhnya kepada iblis demi membantu David. Ritual pun selesai dengan kondisi Ed yang terkena serangan jantung dan harus dilarikan ke rumah sakit. Akan tetapi, sang iblis ternyata benar-benar menerima penyerahan diri Arne. Dia mulai mengalami berbagai tragedi yang berujung menjadikannya sebagai seorang pembunuh.",
+        duration: 112,
+        director: 'Michael Chaves',
+        writter: 'James Wan',
+        genre: 'Horror',
+        ph: 'Warnes Bros , Pitcures',
+        score: 6.3,
+        pg: 13),
   ];
 
   @override
@@ -73,7 +96,7 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 46,
                 ),
                 CarouselSlider(
@@ -87,13 +110,13 @@ class _HomePageState extends State<HomePage> {
                       height: 163,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        gradient: LinearGradient(
+                        gradient: const LinearGradient(
                             colors: [Color(0xff867AD2), Color(0xff494080)]),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 57),
+                const SizedBox(height: 57),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -119,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                         const SizedBox(
                           width: 4.0,
                         ),
-                        Icon(
+                        const Icon(
                           Icons.arrow_forward_ios,
                           color: appWhite,
                           size: 8,
@@ -142,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   height: 19.0,
                 ),
-                Divider(
+                const Divider(
                   color: appWhite,
                   height: 0.5,
                 ),
@@ -192,6 +215,18 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: appPurple,
+        items: [
+        BottomNavigationBarItem(
+            icon: SvgPicture.asset(SvgDir.home), label: 'Beranda'),
+        BottomNavigationBarItem(
+            icon: SvgPicture.asset(SvgDir.home), label: 'Beranda'),
+        BottomNavigationBarItem(
+            icon: SvgPicture.asset(SvgDir.home), label: 'Beranda'),
+        BottomNavigationBarItem(
+            icon: SvgPicture.asset(SvgDir.home), label: 'Beranda'),
+      ]),
     );
   }
 }

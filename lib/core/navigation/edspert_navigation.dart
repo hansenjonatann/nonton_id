@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nonton_id/pages/buy_ticket.dart';
 import 'package:nonton_id/pages/home.dart';
 import 'package:nonton_id/pages/login.dart';
 import 'package:nonton_id/pages/movie_detail.dart';
@@ -15,14 +16,16 @@ class EdspertNavigation {
     SignUpPage.routeName: (context) => const SignUpPage(),
     HomePage.routeName: (context) => const HomePage(),
     MovieDetailPage.routeName: (context) => const MovieDetailPage(),
+    BuyTicketPage.routeName: (context) => const BuyTicketPage(),
   };
 
   void pushNamed(String routeName, {Object? arguments}) {
-    navigatorKey.currentState!.pushNamed(routeName);
+    navigatorKey.currentState!.pushNamed(routeName, arguments: arguments);
   }
 
   void pushReplacementNamed(String routeName, {Object? arguments}) {
-    navigatorKey.currentState!.pushReplacementNamed(routeName);
+    navigatorKey.currentState!
+        .pushReplacementNamed(routeName, arguments: arguments);
   }
 
   void push(Widget widget) {
