@@ -7,4 +7,6 @@ class ImageDir {
   static const String starwars = '$image/dashboard/starwars.png';
   static const String thecondjuring = '$image/dashboard/thecondjuring.png';
   static const String fastandfurious = '$image/dashboard/fast&furious.png';
+  static const String cinema21 = '$image/dashboard/cinema21.png';
+  static const String cgv = '$image/dashboard/cgv.png';
 }

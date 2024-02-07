@@ -60,6 +60,8 @@ class _HomePageState extends State<HomePage> {
         pg: 13),
   ];
 
+  int _currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -216,17 +218,24 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: appPurple,
-        items: [
-        BottomNavigationBarItem(
-            icon: SvgPicture.asset(SvgDir.home), label: 'Beranda'),
-        BottomNavigationBarItem(
-            icon: SvgPicture.asset(SvgDir.home), label: 'Beranda'),
-        BottomNavigationBarItem(
-            icon: SvgPicture.asset(SvgDir.home), label: 'Beranda'),
-        BottomNavigationBarItem(
-            icon: SvgPicture.asset(SvgDir.home), label: 'Beranda'),
-      ]),
+          backgroundColor: appPurple,
+          currentIndex: _currentIndex,
+          onTap: (index) {
+            setState(() {
+              index = _currentIndex++;
+              print(index);
+            });
+          },
+          items: [
+            BottomNavigationBarItem(
+                icon: SvgPicture.asset(SvgDir.home), label: 'Beranda'),
+            BottomNavigationBarItem(
+                icon: SvgPicture.asset(SvgDir.home), label: 'Beranda'),
+            BottomNavigationBarItem(
+                icon: SvgPicture.asset(SvgDir.home), label: 'Beranda'),
+            BottomNavigationBarItem(
+                icon: SvgPicture.asset(SvgDir.home), label: 'Beranda'),
+          ]),
     );
   }
 }

@@ -5,4 +5,5 @@ class SvgDir {
   static const String notification = '${svgDir}notification_bell.svg';
   static const String ticket = '${svgDir}ticket.svg';
   static const String ticketOutline = '${svgDir}ticket_outline.svg';
+  static const String searchIcon = '${svgDir}search.svg';
 }
