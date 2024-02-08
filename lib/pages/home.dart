@@ -7,6 +7,7 @@ import 'package:nonton_id/models/home/movie_model.dart';
 import 'package:nonton_id/utils/image_dir.dart';
 import 'package:nonton_id/utils/svg_dir.dart';
 import 'package:nonton_id/utils/widget/card_movie.dart';
+import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -217,25 +218,41 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: FloatingNavbar(
           backgroundColor: appPurple,
-          currentIndex: _currentIndex,
-          onTap: (index) {
-            setState(() {
-              index = _currentIndex++;
-              print(index);
-            });
-          },
+          selectedBackgroundColor: appPurple,
+          selectedItemColor: Color(0xffF2C94C),
+          unselectedItemColor: appWhite,
           items: [
-            BottomNavigationBarItem(
-                icon: SvgPicture.asset(SvgDir.home), label: 'Beranda'),
-            BottomNavigationBarItem(
-                icon: SvgPicture.asset(SvgDir.home), label: 'Beranda'),
-            BottomNavigationBarItem(
-                icon: SvgPicture.asset(SvgDir.home), label: 'Beranda'),
-            BottomNavigationBarItem(
-                icon: SvgPicture.asset(SvgDir.home), label: 'Beranda'),
-          ]),
+            FloatingNavbarItem(
+                customWidget: IconButton(
+                  icon: SvgPicture.asset(SvgDir.home),
+                  onPressed: () {},
+                ),
+                title: 'Beranda'),
+            FloatingNavbarItem(
+                customWidget: IconButton(
+                  icon: SvgPicture.asset(SvgDir.ticket),
+                  onPressed: () {},
+                ),
+                title: 'Tiket'),
+            FloatingNavbarItem(
+                customWidget: IconButton(
+                  icon: SvgPicture.asset(SvgDir.cinemaIcon),
+                  onPressed: () {},
+                ),
+                title: 'Bioskop'),
+            FloatingNavbarItem(
+                customWidget: IconButton(
+                  icon: SvgPicture.asset(SvgDir.accountIcon),
+                  onPressed: () {},
+                ),
+                title: 'Account'),
+          ],
+          currentIndex: 0,
+          onTap: (int val) {
+            print(val);
+          }),
     );
   }
 }

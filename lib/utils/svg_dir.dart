@@ -6,4 +6,6 @@ class SvgDir {
   static const String ticket = '${svgDir}ticket.svg';
   static const String ticketOutline = '${svgDir}ticket_outline.svg';
   static const String searchIcon = '${svgDir}search.svg';
+  static const String cinemaIcon = '${svgDir}cinema.svg';
+  static const String accountIcon = '${svgDir}account.svg';
 }

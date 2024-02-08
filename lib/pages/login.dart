@@ -10,7 +10,10 @@ import 'package:nonton_id/utils/widget/nonton_id_text.dart';
 class LoginPage extends StatelessWidget {
   static const routeName = '/login-page';
 
-  const LoginPage({super.key});
+  LoginPage({super.key});
+
+  final TextEditingController _usernameC = TextEditingController();
+  final TextEditingController _passwordC = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,9 +32,14 @@ class LoginPage extends StatelessWidget {
           FormFieldWidget(
             hintText: 'username',
             icon: Icons.person_2_outlined,
+            controller: _usernameC,
           ),
           SizedBox(height: 8),
-          FormFieldWidget(hintText: 'password', icon: Icons.lock_open_outlined),
+          FormFieldWidget(
+            hintText: 'password',
+            icon: Icons.lock_open_outlined,
+            controller: _passwordC,
+          ),
           SizedBox(height: 32),
           Row(children: [
             SizedBox(width: 47),
@@ -44,7 +52,7 @@ class LoginPage extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {
-               EdspertNavigation().pushReplacementNamed(SignUpPage.routeName);
+                EdspertNavigation().pushReplacementNamed(SignUpPage.routeName);
               },
               child: Text(
                 'Daftar',

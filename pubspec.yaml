@@ -30,12 +30,14 @@ environment:
 dependencies:
   carousel_slider: ^4.2.1
   cupertino_icons: ^1.0.2
+  floating_bottom_navigation_bar: ^1.5.2
   flutter:
     sdk: flutter
   flutter_rating_bar: ^4.0.1
   flutter_svg: ^2.0.9
   google_fonts: ^6.1.0
   http: ^1.1.0
+  persistent_bottom_nav_bar: ^5.0.2
   weekly_date_picker: ^1.4.2
 
 dev_dependencies:

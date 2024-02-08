@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nonton_id/constant/color.dart';
 import 'package:nonton_id/models/home/cinema_model.dart';
-import 'package:nonton_id/models/home/movie_model.dart';
 
 class BookingTicketPage extends StatelessWidget {
   static const routeName = '/booking-ticket-page';

@@ -13,8 +13,8 @@ class EdspertNavigation {
   // Register route
   static Map<String, WidgetBuilder> routes = {
     SplashScreen.routeName: (context) => const SplashScreen(),
-    LoginPage.routeName: (context) => const LoginPage(),
-    SignUpPage.routeName: (context) => const SignUpPage(),
+    LoginPage.routeName: (context) => LoginPage(),
+    SignUpPage.routeName: (context) => SignUpPage(),
     HomePage.routeName: (context) => const HomePage(),
     MovieDetailPage.routeName: (context) => const MovieDetailPage(),
     BuyTicketPage.routeName: (context) => const BuyTicketPage(),

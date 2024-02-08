@@ -76,6 +76,7 @@ class _BuyTicketPageState extends State<BuyTicketPage> {
                 height: 10.0,
               ),
               WeeklyDatePicker(
+                
                 selectedDay: _selectedDate,
                 backgroundColor: appDisable,
                 enableWeeknumberText: false,
