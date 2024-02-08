@@ -19,15 +19,30 @@ class BuyTicketPage extends StatefulWidget {
 class _BuyTicketPageState extends State<BuyTicketPage> {
   List<CinemaModel> listCinema = [
     CinemaModel(
-        cinemaImage: ImageDir.cgv, cinemaName: 'CGV Jwalk', isActive: true),
+        id: "1",
+        cinemaImage: ImageDir.cgv,
+        cinemaName: 'CGV Jwalk',
+        isActive: true,
+        cinemaType: 'Regular',
+        cinemaPrice: 50000,
+        cinemaTimeSchedule: '16.00'),
     CinemaModel(
-        cinemaImage: ImageDir.cinema21,
-        cinemaName: 'XXI Ambarukmo Plaza',
-        isActive: false),
+      id: "2",
+      cinemaImage: ImageDir.cinema21,
+      cinemaName: 'XXI Ambarukmo Plaza',
+      isActive: false,
+      cinemaType: 'Saiten Suite',
+      cinemaPrice: 65000,
+      cinemaTimeSchedule: '17.00',
+    ),
     CinemaModel(
+        id: "3",
         cinemaImage: ImageDir.cinema21,
         cinemaName: 'Cinema XXI',
-        isActive: false),
+        isActive: false,
+        cinemaType: 'Premium',
+        cinemaPrice: 85000,
+        cinemaTimeSchedule: '18.00'),
   ];
   final DateTime _selectedDate = DateTime.timestamp();
 
@@ -113,7 +128,7 @@ class _BuyTicketPageState extends State<BuyTicketPage> {
               Column(
                 children: List.generate(listCinema.length,
                     (index) => CinemaWidget(cinemaModel: listCinema[index])),
-              )
+              ),
             ],
           ),
         ));

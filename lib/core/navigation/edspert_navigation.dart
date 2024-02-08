@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nonton_id/pages/booking_ticket.dart';
 import 'package:nonton_id/pages/buy_ticket.dart';
 import 'package:nonton_id/pages/home.dart';
 import 'package:nonton_id/pages/login.dart';
@@ -17,6 +18,7 @@ class EdspertNavigation {
     HomePage.routeName: (context) => const HomePage(),
     MovieDetailPage.routeName: (context) => const MovieDetailPage(),
     BuyTicketPage.routeName: (context) => const BuyTicketPage(),
+    BookingTicketPage.routeName: (context) => const BookingTicketPage(),
   };
 
   void pushNamed(String routeName, {Object? arguments}) {
